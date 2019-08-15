@@ -1,0 +1,18 @@
+<div class="container mt-4">
+
+  <h1>La casa del Mojito </h1>
+
+  <ul> <% @cocktails.each do |element| %>
+        <li><%= link_to element.name, cocktail_path(element) %>
+            <%= element.description  %>
+            <%= element.photo %>
+            <%= link_to "Delete", cocktail_path(element),
+              method: :delete,
+              data: { confirm: "Are you sure?" } %></li>
+        <% end %>
+    </ul>
+
+    <%= link_to "New mojito cocktail", new_cocktail_path %>
+
+</div>
+

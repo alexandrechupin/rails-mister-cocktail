@@ -1,0 +1,15 @@
+<div class="container mt-4">
+
+  <h1> Doses not so serious index </h1>
+
+  <ul> <% @doses.each do |element| %>
+        <li><%= link_to element.description, cocktail_path(element) %>
+            <%= link_to "Delete", dose_path(element),
+              method: :delete,
+              data: { confirm: "Are you sure?" } %></li>
+        <% end %>
+    </ul>
+
+    <%= link_to "New dose", new_dose_path %>
+
+</div>
