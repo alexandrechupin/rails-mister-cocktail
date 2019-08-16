@@ -11,6 +11,7 @@
   <% @cocktail.doses.each do |element| %>
     <li><%= element.description %>
         <%= element.ingredient.name %>
+        <%= cl_image_tag @element.photo, height: 300, width: 400, crop: :fill %>
         <%= link_to "delete", dose_path(element), method: :delete, data: {confirm: "Are you sure ?"} %>
     </li>
     <% end %>
