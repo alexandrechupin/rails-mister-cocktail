@@ -1,18 +1,31 @@
-<div class="container mt-4">
 
-  <h1 class="font-weight-bold text-danger mb-4">La casa del Mojito </h1>
+<div class="banner">
 
-  <ul> <% @cocktails.each do |element| %>
-        <li class="list-group-item" ><%= link_to element.name, cocktail_path(element) %>
-            <%= element.description  %>
-            <%= element.photo %>
-            <%= link_to "Delete", cocktail_path(element),
-              method: :delete,
-              data: { confirm: "Are you sure?" } %></li>
-        <% end %>
-    </ul>
-
-  <%= cl_image_tag("orfyxglkalroyck8ucl2"), width: 400, height: 300, crop: :fill) %>
+  <h1 class="font-weight-bold text-danger">Casa del Mojito </h1>
 
 </div>
+
+
+<div class="container mt-4 main">
+  <% @cocktails.each do |element| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path element.photo, crop: :fill %>)">
+        <div class ="cardtainer">
+          <%= link_to element.name, cocktail_path(element), id: "name" %>
+          <div id="description">
+            <%= element.description %>
+          </div>
+          <%= link_to "delete", cocktail_path(element),
+          method: :delete,
+          data: { confirm: "Are you sure?" }, id: "delete" %>
+        </div>
+      </div>
+  <% end %>
+</div>
+
+
+
+
+
+
+
 

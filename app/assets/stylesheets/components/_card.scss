@@ -1,0 +1,43 @@
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  width:350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.main{
+ display:flex;
+ justify-content:space-evenly;
+ flex-wrap:wrap;
+}
+
+.cardtainer{
+ display:flex;
+ flex-direction: column;
+}
+#name {
+  color:red;
+  font-family: "Times New Roman", Times, serif;
+  text-shadow: 1px 1px 1px white;
+  font-size: 30px;
+}
+
+#description {
+  color:white;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 15px;
+}
+#delete {
+  color:black;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+}

@@ -8,7 +8,7 @@ class CocktailsController < ApplicationController
   end
 
   def new
-    @cocktails = Cocktail.new
+    @cocktail = Cocktail.new
   end
 
   def create
@@ -30,7 +30,7 @@ class CocktailsController < ApplicationController
 
   def destroy
     @cocktail.destroy
-    redirect_to cocktail_path
+    redirect_to cocktails_path
   end
 
   private
